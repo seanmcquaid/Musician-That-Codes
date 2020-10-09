@@ -11,6 +11,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "next": "9.5.3",
+    "prettier": "^2.1.2",
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -21,6 +22,8 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.0.4",
     "babel-jest": "^26.5.2",
+    "eslint": "^7.10.0",
+    "eslint-plugin-react": "^7.21.3",
     "jest": "^26.5.2",
     "jest-dom": "^4.0.0"
   }
