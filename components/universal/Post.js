@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Post = React.memo(({}) => <StyledPost></StyledPost>);
+const Post = React.memo(({date, title, id}) => <StyledPost></StyledPost>);
 
 const StyledPost = styled.div``;
 
-Post.propTypes = {};
+Post.propTypes = {
+  date: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired
+};
 
 export default Post;
