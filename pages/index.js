@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import PostList from '../components/app/home/PostList';
 import { H1, P } from '../components/universal';
@@ -17,6 +17,14 @@ export default function Home({ posts }) {
   const [currentPage, setCurrentPage] = useState(0);
   const currentPosts = fakePosts.slice(currentPage * 5, (currentPage + 1) * 5);
   console.log(currentPosts);
+
+  const prevButtonOnClick = useCallback(() => {
+    setCurrentPage((pageNumber) => pageNumber - 1);
+  }, []);
+
+  const nextButtonOnClick = useCallback(() => {
+    setCurrentPage((pageNumber) => pageNumber + 1);
+  }, []);
 
   return (
     <HomePageContainer>
