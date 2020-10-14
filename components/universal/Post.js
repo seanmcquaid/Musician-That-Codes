@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Post = React.memo(({ date, title, id }) => <StyledPost></StyledPost>);
+const Post = React.memo(({ date, title, id }) => <StyledPost>Post</StyledPost>);
 
 const StyledPost = styled.div``;
 

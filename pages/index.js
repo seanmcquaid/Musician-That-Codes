@@ -6,9 +6,17 @@ import { H1, P } from '../components/universal';
 import postsService from '../services/postsService';
 
 export default function Home({ posts }) {
-  const fakePosts = [];
+  const fakePosts = [
+    { date: 'date', title: '', id: 0 },
+    { date: 'date', title: '', id: 1 },
+    { date: 'date', title: '', id: 5 },
+    { date: 'date', title: '', id: 6 },
+    { date: 'date', title: '', id: 7 },
+    { date: 'date', title: '', id: 8 },
+  ];
   const [currentPage, setCurrentPage] = useState(0);
   const currentPosts = fakePosts.slice(currentPage * 5, (currentPage + 1) * 5);
+  console.log(currentPosts);
 
   return (
     <HomePageContainer>
