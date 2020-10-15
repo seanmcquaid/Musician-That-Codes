@@ -26,8 +26,10 @@ export default function Home({ posts }) {
   }, [currentPage]);
 
   const nextButtonOnClick = useCallback(() => {
-    setCurrentPage((pageNumber) => pageNumber + 1);
-  }, []);
+    if (currentPage + 1 < totalPages) {
+      setCurrentPage((pageNumber) => pageNumber + 1);
+    }
+  }, [currentPage, totalPages]);
 
   return (
     <HomePageContainer>
@@ -40,13 +42,17 @@ export default function Home({ posts }) {
           practices, general advice and how to successfully transition into the
           industry!
         </P>
-        <PostList posts={currentPosts} />
-        <Button onClick={prevButtonOnClick}>Prev</Button>
-        <PageNumber>
-          Page {currentPage + 1} of {totalPages}
-        </PageNumber>
-        <Button onClick={nextButtonOnClick}>Next</Button>
       </Header>
+      <Main>
+        <PostList posts={currentPosts} />
+        <PageContainer>
+          <Button onClick={prevButtonOnClick}>Prev</Button>
+          <PageNumber>
+            Page {currentPage + 1} of {totalPages}
+          </PageNumber>
+          <Button onClick={nextButtonOnClick}>Next</Button>
+        </PageContainer>
+      </Main>
     </HomePageContainer>
   );
 }
@@ -79,5 +85,7 @@ const Header = styled.header`
 const Main = styled.main`
   width: 60%;
 `;
+
+const PageContainer = styled.div``;
 
 const PageNumber = styled.span``;
