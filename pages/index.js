@@ -2,7 +2,7 @@ import Head from 'next/head';
 import { useCallback, useState } from 'react';
 import styled from 'styled-components';
 import PostList from '../components/app/home/PostList';
-import { H1, P } from '../components/universal';
+import { Button, H1, P } from '../components/universal';
 import postsService from '../services/postsService';
 
 export default function Home({ posts }) {
@@ -16,11 +16,14 @@ export default function Home({ posts }) {
   ];
   const [currentPage, setCurrentPage] = useState(0);
   const currentPosts = fakePosts.slice(currentPage * 5, (currentPage + 1) * 5);
-  console.log(currentPosts);
+  const totalPages =
+    Math.floor(fakePosts.length / 5) + (fakePosts % 5 !== 0 ? 1 : 0);
 
   const prevButtonOnClick = useCallback(() => {
-    setCurrentPage((pageNumber) => pageNumber - 1);
-  }, []);
+    if (currentPage > 0) {
+      setCurrentPage((pageNumber) => pageNumber - 1);
+    }
+  }, [currentPage]);
 
   const nextButtonOnClick = useCallback(() => {
     setCurrentPage((pageNumber) => pageNumber + 1);
@@ -38,6 +41,11 @@ export default function Home({ posts }) {
           industry!
         </P>
         <PostList posts={currentPosts} />
+        <Button onClick={prevButtonOnClick}>Prev</Button>
+        <PageNumber>
+          Page {currentPage + 1} of {totalPages}
+        </PageNumber>
+        <Button onClick={nextButtonOnClick}>Next</Button>
       </Header>
     </HomePageContainer>
   );
@@ -71,3 +79,5 @@ const Header = styled.header`
 const Main = styled.main`
   width: 60%;
 `;
+
+const PageNumber = styled.span``;
