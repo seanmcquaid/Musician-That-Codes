@@ -1,7 +1,11 @@
 import styled from 'styled-components';
 import postsService from '../../services/postsService';
 
-export default function PostPage() {
+export default function PostPage({ post }) {
+  const fakePost = {
+    title: 'Fake Post',
+    text: '',
+  };
   return <PostPageContainer></PostPageContainer>;
 }
 
