@@ -20,20 +20,16 @@ export default function Home({ posts }) {
     Math.floor(fakePosts.length / 5) + (fakePosts % 5 !== 0 ? 1 : 0);
 
   const prevButtonOnClick = useCallback(() => {
-    if (currentPage > 0) {
-      setCurrentPage((pageNumber) => pageNumber - 1);
-    }
+    setCurrentPage((pageNumber) => pageNumber - 1);
   }, [currentPage]);
 
   const nextButtonOnClick = useCallback(() => {
-    if (currentPage + 1 < totalPages) {
-      setCurrentPage((pageNumber) => pageNumber + 1);
-    }
+    setCurrentPage((pageNumber) => pageNumber + 1);
   }, [currentPage, totalPages]);
 
   return (
     <HomePageContainer>
-      <Head>Home</Head>;
+      <Head>Home</Head>
       <Header>
         <H1>Sean McQuaid's Code Blog</H1>
         <P>
@@ -46,11 +42,18 @@ export default function Home({ posts }) {
       <Main>
         <PostList posts={currentPosts} />
         <PageContainer>
-          <Button onClick={prevButtonOnClick}>Prev</Button>
+          <Button onClick={prevButtonOnClick} disabled={currentPage === 0}>
+            Prev
+          </Button>
           <PageNumber>
             Page {currentPage + 1} of {totalPages}
           </PageNumber>
-          <Button onClick={nextButtonOnClick}>Next</Button>
+          <Button
+            onClick={nextButtonOnClick}
+            disabled={currentPage + 1 === totalPages}
+          >
+            Next
+          </Button>
         </PageContainer>
       </Main>
     </HomePageContainer>
