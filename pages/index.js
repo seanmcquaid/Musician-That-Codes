@@ -6,18 +6,12 @@ import { Button, H1, P } from '../components/universal';
 import postsService from '../services/postsService';
 
 export default function Home({ posts }) {
-  const fakePosts = [
-    { date: 'date', title: '', id: 0 },
-    { date: 'date', title: '', id: 1 },
-    { date: 'date', title: '', id: 5 },
-    { date: 'date', title: '', id: 6 },
-    { date: 'date', title: '', id: 7 },
-    { date: 'date', title: '', id: 8 },
-  ];
   const [currentPage, setCurrentPage] = useState(0);
-  const currentPosts = fakePosts.slice(currentPage * 5, (currentPage + 1) * 5);
-  const totalPages =
-    Math.floor(fakePosts.length / 5) + (fakePosts % 5 !== 0 ? 1 : 0);
+  const currentPosts = posts.slice(currentPage * 5, (currentPage + 1) * 5);
+  const totalPages = useMemo(
+    () => Math.floor(posts.length / 5) + (posts % 5 !== 0 ? 1 : 0),
+    [posts]
+  );
 
   const prevButtonOnClick = useCallback(() => {
     setCurrentPage((pageNumber) => pageNumber - 1);
@@ -60,14 +54,12 @@ export default function Home({ posts }) {
   );
 }
 
-// export async function getStaticProps() {
-//   const posts = await postsService.getPosts();
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }
+export async function getStaticProps() {
+  const posts = postsService.getSortedPosts();
+  return {
+    props: { posts },
+  };
+}
 
 const HomePageContainer = styled.div`
   display: flex;
