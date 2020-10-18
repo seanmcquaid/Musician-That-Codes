@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 import styled from 'styled-components';
 import PostList from '../components/app/home/PostList';
 import { Button, H1, P } from '../components/universal';

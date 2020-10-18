@@ -7,6 +7,10 @@ export default function PostPage({ postData }) {
 
 const PostPageContainer = styled.div``;
 
+const Header = styled.header``;
+
+const Main = styled.main``;
+
 export async function getStaticPaths() {
   const paths = postsService.getAllPostIds();
   return {
