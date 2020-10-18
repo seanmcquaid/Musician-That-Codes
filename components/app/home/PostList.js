@@ -12,7 +12,9 @@ const PostList = React.memo(({ posts }) => (
   </StyledPostList>
 ));
 
-const StyledPostList = styled.ol``;
+const StyledPostList = styled.ul`
+  list-style: none;
+`;
 
 const ListItem = styled.li``;
 

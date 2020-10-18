@@ -7,10 +7,10 @@ import { parseISO, format } from 'date-fns';
 const Post = React.memo(({ date, title, id }) => (
   <StyledPostLink href={`/posts/${id}`}>
     <PostInfoContainer>
-      <PostTitle>{title}</PostTitle>
       <PostDateTime dateTime={parseISO(date)}>
         {format(parseISO(date), 'LLLL d, yyyy')}
       </PostDateTime>
+      <PostTitle>{title}</PostTitle>
     </PostInfoContainer>
   </StyledPostLink>
 ));

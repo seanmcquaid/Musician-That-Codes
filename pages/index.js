@@ -15,11 +15,11 @@ export default function Home({ posts }) {
 
   const prevButtonOnClick = useCallback(() => {
     setCurrentPage((pageNumber) => pageNumber - 1);
-  }, [currentPage]);
+  }, []);
 
   const nextButtonOnClick = useCallback(() => {
     setCurrentPage((pageNumber) => pageNumber + 1);
-  }, [currentPage, totalPages]);
+  }, []);
 
   return (
     <HomePageContainer>
