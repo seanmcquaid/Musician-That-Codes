@@ -21,15 +21,48 @@ export default function PostPage({ postData }) {
   );
 }
 
-const PostPageContainer = styled.div``;
+const PostPageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+`;
 
-const Header = styled.header``;
+const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  max-width: 520px;
+`;
 
-const Main = styled.main``;
+const Main = styled.main`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  max-width: 520px;
+`;
 
-const ArticleText = styled.article``;
+const ArticleText = styled.article`
+  font-family: 'Karla', sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
 
-const HomeLink = styled(Link)``;
+const HomeLink = styled(Link)`
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+`;
 
 export async function getStaticPaths() {
   const paths = postsService.getAllPostIds();
