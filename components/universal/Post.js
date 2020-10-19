@@ -5,14 +5,14 @@ import Link from 'next/link';
 import { parseISO, format } from 'date-fns';
 
 const Post = React.memo(({ date, title, id }) => (
-  <StyledPostLink href={`/posts/${id}`}>
-    <PostInfoContainer>
-      <PostDateTime dateTime={parseISO(date)}>
-        {format(parseISO(date), 'LLLL d, yyyy')}
-      </PostDateTime>
-      <PostTitle>{title}</PostTitle>
-    </PostInfoContainer>
-  </StyledPostLink>
+  <PostInfoContainer>
+    <PostDateTime dateTime={parseISO(date)}>
+      {format(parseISO(date), 'LLLL d, yyyy')}
+    </PostDateTime>
+    <PostTitle>
+      <StyledPostLink href={`/posts/${id}`}>{title}</StyledPostLink>
+    </PostTitle>
+  </PostInfoContainer>
 ));
 
 const StyledPostLink = styled(Link)``;

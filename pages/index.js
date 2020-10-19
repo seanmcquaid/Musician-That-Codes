@@ -23,7 +23,9 @@ export default function Home({ posts }) {
 
   return (
     <HomePageContainer>
-      <Head>Home</Head>
+      <Head>
+        <title>Home</title>
+      </Head>
       <Header>
         <H1>Sean McQuaid's Code Blog</H1>
         <P>
@@ -75,6 +77,7 @@ const Header = styled.header`
   justify-content: center;
   align-items: center;
   width: 60%;
+  padding: 1rem;
 `;
 
 const Main = styled.main`
