@@ -14,6 +14,11 @@ const PostList = React.memo(({ posts }) => (
 
 const StyledPostList = styled.ul`
   list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow: auto;
 `;
 
 const ListItem = styled.li``;

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const H2 = React.memo(styled.h2`
+const H4 = React.memo(styled.h4`
   font-family: 'Rubik', sans-serif;
-  font-size: 2rem;
+  font-size: 1rem;
 `);
 
-export default H2;
+export default H4;

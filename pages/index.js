@@ -37,7 +37,7 @@ export default function Home({ posts }) {
       </Header>
       <Main>
         <PostList posts={currentPosts} />
-        <PageContainer>
+        <PageButtonsContainer>
           <Button onClick={prevButtonOnClick} disabled={currentPage === 0}>
             Prev
           </Button>
@@ -50,7 +50,7 @@ export default function Home({ posts }) {
           >
             Next
           </Button>
-        </PageContainer>
+        </PageButtonsContainer>
       </Main>
     </HomePageContainer>
   );
@@ -69,6 +69,7 @@ const HomePageContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 100%;
 `;
 
 const Header = styled.header`
@@ -76,14 +77,24 @@ const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  width: 100%;
   padding: 1rem;
+  max-width: 520px;
 `;
 
 const Main = styled.main`
-  width: 60%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  max-width: 520px;
 `;
 
-const PageContainer = styled.div``;
+const PageButtonsContainer = styled.div``;
 
-const PageNumber = styled.span``;
+const PageNumber = styled.span`
+  font-family: 'Karla', sans-serif;
+  padding: 1rem;
+`;
