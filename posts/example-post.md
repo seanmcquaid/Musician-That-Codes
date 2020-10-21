@@ -1,6 +1,6 @@
 ---
-title: 'Example title'
-date: '2020-01-02'
+title: 'Welcome to my Blog!'
+date: '2020-10-20'
 ---
 
 Example Paragraph

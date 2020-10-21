@@ -27,7 +27,7 @@ export default function Home({ posts }) {
         <title>Home</title>
       </Head>
       <Header>
-        <H1>Sean McQuaid's Code Blog</H1>
+        <H1>The Musician That Codes</H1>
         <P>
           Welcome to my blog! My name is Sean and I am currently a React
           Developer at Chick-fil-A. I will primarily post about coding best
