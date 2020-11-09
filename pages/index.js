@@ -29,10 +29,10 @@ export default function Home({ posts }) {
       <Header>
         <H1>The Musician That Codes</H1>
         <P>
-          Welcome to my blog! My name is Sean and I am currently a React
-          Developer at Chick-fil-A. I will primarily post about coding best
-          practices, general advice and how to successfully transition into the
-          industry!
+          Hello and welcome to my blog! My name is Sean and I am a Software
+          Engineer that specializes in Web Development. I will primarily post
+          about coding best practices, general advice and how to successfully
+          transition into the industry!
         </P>
       </Header>
       <Main>
