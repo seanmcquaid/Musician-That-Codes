@@ -38,6 +38,8 @@ const Header = styled.header`
   width: 100%;
   padding: 1rem;
   max-width: 600px;
+  height: 100%;
+  max-height: 200px;
 `;
 
 const Main = styled.main`
@@ -48,6 +50,7 @@ const Main = styled.main`
   align-items: flex-start;
   padding: 1rem;
   max-width: 600px;
+  height: 100%;
 `;
 
 const ArticleText = styled.article`
