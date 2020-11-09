@@ -21,6 +21,23 @@ export default function PostPage({ postData }) {
   );
 }
 
+export async function getStaticPaths() {
+  const paths = postsService.getAllPostIds();
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const postData = await postsService.getPostDataById(params.id);
+  return {
+    props: {
+      postData,
+    },
+  };
+}
+
 const PostPageContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -38,8 +55,6 @@ const Header = styled.header`
   width: 100%;
   padding: 1rem;
   max-width: 600px;
-  height: 100%;
-  max-height: 200px;
 `;
 
 const Main = styled.main`
@@ -50,7 +65,6 @@ const Main = styled.main`
   align-items: flex-start;
   padding: 1rem;
   max-width: 600px;
-  height: 100%;
 `;
 
 const ArticleText = styled.article`
@@ -60,26 +74,10 @@ const ArticleText = styled.article`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  flex: 0 0 auto;
 `;
 
 const HomeLink = styled(Link)`
   font-family: 'Karla', sans-serif;
   font-size: 1rem;
 `;
-
-export async function getStaticPaths() {
-  const paths = postsService.getAllPostIds();
-  return {
-    paths,
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const postData = await postsService.getPostDataById(params.id);
-  return {
-    props: {
-      postData,
-    },
-  };
-}
