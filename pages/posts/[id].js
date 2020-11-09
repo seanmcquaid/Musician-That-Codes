@@ -37,7 +37,7 @@ const Header = styled.header`
   align-items: center;
   width: 100%;
   padding: 1rem;
-  max-width: 520px;
+  max-width: 600px;
 `;
 
 const Main = styled.main`
@@ -47,7 +47,7 @@ const Main = styled.main`
   justify-content: center;
   align-items: flex-start;
   padding: 1rem;
-  max-width: 520px;
+  max-width: 600px;
 `;
 
 const ArticleText = styled.article`
