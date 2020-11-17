@@ -23,7 +23,7 @@ export default {
       };
     });
 
-    return allPostsData.sort((a, b) => a.date < b.date);
+    return allPostsData.sort((a, b) => a.date < b.date).reverse();
   },
   getAllPostIds: () => {
     return fileNames.map((fileName) => {

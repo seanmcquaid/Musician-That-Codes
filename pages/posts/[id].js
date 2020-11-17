@@ -13,7 +13,9 @@ export default function PostPage({ postData }) {
       <ArticleText>
         <Header>
           <H1>{postData.title}</H1>
-          <HomeLink href="/">Go back</HomeLink>
+          <HomeLinkContainer>
+            <HomeLink href="/">Go back</HomeLink>
+          </HomeLinkContainer>
         </Header>
         <Main dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></Main>
       </ArticleText>
@@ -80,4 +82,14 @@ const ArticleText = styled.article`
 const HomeLink = styled(Link)`
   font-family: 'Karla', sans-serif;
   font-size: 1rem;
+  border-bottom: 1px solid black;
+`;
+
+const HomeLinkContainer = styled.div`
+  border-bottom: 1px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 `;
