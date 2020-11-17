@@ -1,5 +1,5 @@
 ---
-title: 'Three Musical Concepts that Apply to Coding'
+title: 'Three Musical Concepts That Apply To Coding'
 date: '2020-11-16'
 ---
 
@@ -11,7 +11,7 @@ When I first started taking music seriously, I was all over the place with my pr
 
 Often as developers, it can be overwhelming to even conceptualize the sheer amount of specializations and technologies that we can learn. Typical job postings make you feel as though you alone have to be an entire development team which just perpetuates this problem. I firmly believe that you should get really good at ONE THING before moving onto the next. For example, say your ultimate goal is to become a Full-Stack Web Developer. Start with Front End development and really work on understanding the basics of HTML, CSS and JavaScript. After you've done that, maybe consider adding in a JavaScript framework/library (I will explain how to select your framework in another post). Only after you've had enough experience to adequately understand fundamentals of Front End development, then you can move onto learning Back End development. You get the idea? It's almost cliche to say but becoming a better developer is definitely a marathon, not a sprint!
 
-### Apply What You Learn to Practical Applications
+### Apply What You Learn To Practical Applications
 
 In order to improvise coherently over a Jazz Standard, a musician must know how to play their scales, chords and have a fundamental understanding of harmony. Similar to programming, in order to write a complex application, you MUST know your fundamentals. I still spend time EVERY day reviewing fundamentals both on my instrument and my coding. In my opinion, the best way to really practice your fundamentals is to apply your skills practically.
 
@@ -19,7 +19,7 @@ The most common issues I hear from new developers are related to being in "tutor
 
 The details of my process for internalizing new skills/technologies will be discussed in a later blog post!
 
-### Be Honest But Not Too Hard on Yourself
+### Be Honest But Not Too Hard On Yourself
 
 One huge thing I took away from my time with Jon Faddis was to be honest with yourself. As people, we try to do things we are comfortable with and make us feel good, it's only natural! However, we are just massaging our egos and taking away opportunities for us to really address our short comings. I used to do this ALL the time and it led to me plateauing! I would go into the practice room, work on tunes I knew I could play because I had worked on similar ones and I would sound great. However, when I would get called to play tunes on a gig that I didn't know, I would avoid improvising over them. I eventually came to terms with my shortcomings and began spending time every day practicing things I sucked at. I once again noticed that my trumpet playing slowly but surely started to get better.
 
