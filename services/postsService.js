@@ -3,6 +3,7 @@ import path from 'path';
 import matter from 'gray-matter';
 import remark from 'remark';
 import html from 'remark-html';
+import { compareAsc, parseISO } from 'date-fns';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 const fileNames = fs.readdirSync(postsDirectory);
@@ -23,7 +24,9 @@ export default {
       };
     });
 
-    return allPostsData.sort((a, b) => a.date < b.date).reverse();
+    return allPostsData
+      .sort((a, b) => compareAsc(parseISO(a.date), parseISO(b.date)))
+      .reverse();
   },
   getAllPostIds: () => {
     return fileNames.map((fileName) => {
