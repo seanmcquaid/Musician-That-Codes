@@ -3,16 +3,16 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 import { parseISO, format } from 'date-fns';
-import { H4 } from '../universal';
+import { H2 } from '../universal';
 
 const Post = React.memo(({ date, title, id }) => (
   <PostInfoContainer>
     <PostDateTime dateTime={parseISO(date)}>
       {format(parseISO(date), 'LLLL d, yyyy')}
     </PostDateTime>
-    <H4>
+    <H2>
       <Link href={`/posts/${id}`}>{title}</Link>
-    </H4>
+    </H2>
   </PostInfoContainer>
 ));
 
