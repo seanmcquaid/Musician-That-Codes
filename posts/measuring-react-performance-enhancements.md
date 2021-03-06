@@ -15,8 +15,6 @@ Steps for Testing Times :
 2. Last Name - there
 3. Submit
 
-Individual Scenarios :
-
 <table>
   <tr>
     <th>Scenario</th>
@@ -24,7 +22,7 @@ Individual Scenarios :
     <th>Rendering Time</th>
   </tr>
   <tr>
-    <td>useState with Object</td>
+    <td>useState with an Object</td>
     <td>Using an object with useState to manage state</td>
     <td>22.5ms</td>
   </tr>
@@ -66,11 +64,28 @@ Steps for Testing Times :
 
 1. Wait for data to load
 
-Individual Scenarios :
-
-- Batching Set State - 5.4 ms
-- Set State with Object - 5.6 ms
-- Use Reducer Example - 6.2ms
+<table>
+  <tr>
+    <th>Scenario</th>
+    <th>Description</th>
+    <th>Rendering Time</th>
+  </tr>
+  <tr>
+    <td>Batching multiple setState hooks</td>
+    <td>Calling multiple setState hooks in the same function</td>
+    <td>5.4ms</td>
+  </tr>
+  <tr>
+    <td>useState with an Object</td>
+    <td>Using an object with useState to manage state</td>
+    <td>5.6ms</td>
+  </tr>
+  <tr>
+    <td>useReducer</td>
+    <td>Using a reducer with useReducer to manage state</td>
+    <td>6.2ms</td>
+  </tr>
+</table>
 
 ### All Together
 
