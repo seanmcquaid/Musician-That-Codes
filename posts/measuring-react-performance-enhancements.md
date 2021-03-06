@@ -33,15 +33,32 @@ Individual Scenarios :
     <td>Using a reducer with useReducer to manage state</td>
     <td>19.3ms</td>
   </tr>
+  <tr>
+    <td>useState + useCallback</td>
+    <td>Wrapping the onChange functions utilizing useState with useCallback</td>
+    <td>15.4ms</td>
+  </tr>
+  <tr>
+    <td>useReducer + useCallback</td>
+    <td>Wrapping the onChange functions utilizing the dispatch from useReducer with useCallback</td>
+    <td>23.6ms</td>
+  </tr>
+  <tr>
+    <td>React.memo</td>
+    <td>Wrapping some components with React.memo to reduce re-rendering</td>
+    <td>9.1ms</td>
+  </tr>
+  <tr>
+    <td>Without Performance Enhancements</td>
+    <td>Not utilizing any performance enhancements</td>
+    <td>21.4ms</td>
+  </tr>
+  <tr>
+    <td>All with Performance Enhancements</td>
+    <td>Utilizing multiple performance enhancements</td>
+    <td>18.5ms</td>
+  </tr>
 </table>
-
-| Scenario                          | Description | Rendering Time |
-| :-------------------------------- | :---------: | -------------: |
-| useCallback with useState         |    Text     |         15.4ms |
-| useCallback with useReducer       |    Text     |         23.6ms |
-| React.memo                        |    Text     |          9.1ms |
-| Without Performance Enhancements  |    Text     |         21.4ms |
-| All with Performance Enhancements |    Text     |         18.5ms |
 
 ### Data Fetching
 
