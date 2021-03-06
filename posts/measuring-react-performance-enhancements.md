@@ -5,7 +5,7 @@ date: '2021-03-05'
 
 All over the internet, you hear conflicting opinions about the "best" way to approach optimizing performance in React. Instead of just believing what I read previously, I decided to take it upon myself to actually use the Devtools Profiler and compare the actual rendering times for the exact same component trees using the exact same scenarios.
 
-I think the two most common areas where state changes happen are generally speaking : 1) Forms 2) Data Fetching on Load. I ran through mutliple scenarios and documented the rendering times for each scenario below.
+I think the two most common areas where state changes happen are generally speaking : 1) Forms 2) Data Fetching on Load. I ran through mutliple scenarios and documented the rendering times for each scenario.
 
 ### Forms
 
@@ -58,13 +58,7 @@ Steps for Testing Times :
   </tr>
 </table>
 
-minimal difference between useState and useReducer
-
-useCallback can shave off some time but not with useReducer
-
-React.memo seemingly has the biggest potential benefit
-
-All together with multiple enhancements only shaved off 2.9ms
+The data here paints a pretty clear picture. There is minimal difference in performance when using useState and useReducer. The useCallback hook could shave off time when used with useState but not when using the dispatch from useReducer. This is due to the fact that the dispatch function provided by useReducer inherently doesn't change on each render. React.memo seems to have a lot of potential for shaving off some time but comes with inherent trade offs of structuring and pass your props to primitive data types when possible. And above all, when I utilized multiple enhancements together, I only saved 2.9ms.
 
 ### Data Fetching
 
@@ -95,7 +89,7 @@ Steps for Testing Times :
   </tr>
 </table>
 
-VERY minimal difference between these three approaches in terms of time
+With such a small margin of rendering time between these three methods, I really struggle to recommend any of these three explicitly as a catch all. I believe all three have their use cases and clearly have no real performance edge over the other.
 
 ### All Together
 
@@ -124,11 +118,13 @@ Steps for Testing Times :
   </tr>
 </table>
 
-Now we're looking at 0.4ms, so is this really worth it
+We're looking at just a 0.4ms difference when comparing these more complex and likely instances. So are all of these enhancements really worth it???
 
 ### Conclusion
 
-This all confirmed what I already have heard from people like Kent C Dodds, don't use performance enhancements or pre-optimize unless your code is obviously slow.
+This all confirmed what I already have heard from people like Kent C Dodds, don't use performance enhancements or pre-optimize unless your code is obviously slow. Dan Abramov has a GREAT article on some solid principles to apply before even considering these concepts as well that I will provide.
+
+I think as programmers, we want to be as proactive as possible to prevent poor user experiences, however, this can create a lot of overhead and honestly, might not even be beneficial.
 
 Reference Dan's article and Kent C Dodds
 
