@@ -58,6 +58,14 @@ Steps for Testing Times :
   </tr>
 </table>
 
+minimal difference between useState and useReducer
+
+useCallback can shave off some time but not with useReducer
+
+React.memo seemingly has the biggest potential benefit
+
+All together with multiple enhancements only shaved off 2.9ms
+
 ### Data Fetching
 
 Steps for Testing Times :
@@ -87,6 +95,8 @@ Steps for Testing Times :
   </tr>
 </table>
 
+VERY minimal difference between these three approaches in terms of time
+
 ### All Together
 
 Steps for Testing Times :
@@ -114,7 +124,11 @@ Steps for Testing Times :
   </tr>
 </table>
 
+Now we're looking at 0.4ms, so is this really worth it
+
 ### Conclusion
+
+This all confirmed what I already have heard from people like Kent C Dodds, don't use performance enhancements or pre-optimize unless your code is obviously slow.
 
 Reference Dan's article and Kent C Dodds
 
