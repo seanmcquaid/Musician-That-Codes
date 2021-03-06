@@ -5,7 +5,7 @@ date: '2021-03-05'
 
 All over the internet, you hear conflicting opinions about the "best" way to approach optimizing performance in React. Instead of just believing what I read previously, I decided to take it upon myself to actually use the Devtools Profiler and compare the actual rendering times for the exact same component trees using the exact same scenarios.
 
-I think the two most common areas where state changes happen are generally speaking : 1) Forms 2) Data Fetching on Load.
+I think the two most common areas where state changes happen are generally speaking : 1) Forms 2) Data Fetching on Load. I ran through mutliple scenarios and documented the rendering times for each scenario below.
 
 ### Forms
 
@@ -47,12 +47,12 @@ Steps for Testing Times :
     <td>9.1ms</td>
   </tr>
   <tr>
-    <td>Without Performance Enhancements</td>
+    <td>Without performance enhancements</td>
     <td>Not utilizing any performance enhancements</td>
     <td>21.4ms</td>
   </tr>
   <tr>
-    <td>All with Performance Enhancements</td>
+    <td>All with performance enhancements</td>
     <td>Utilizing multiple performance enhancements</td>
     <td>18.5ms</td>
   </tr>
@@ -96,8 +96,23 @@ Steps for Testing Times :
 3. Submit
 4. Wait for data to load
 
-- No Performance Optimizations - 12.6ms
-- Performance Optimizations - 12.2ms
+<table>
+  <tr>
+    <th>Scenario</th>
+    <th>Description</th>
+    <th>Rendering Time</th>
+  </tr>
+  <tr>
+    <td>Without performance enhancements</td>
+    <td>Not utilizing any performance enhancements</td>
+    <td>12.6ms</td>
+  </tr>
+  <tr>
+    <td>All with performance enhancements</td>
+    <td>Utilizing multiple performance enhancements</td>
+    <td>12.2ms</td>
+  </tr>
+</table>
 
 ### Conclusion
 
