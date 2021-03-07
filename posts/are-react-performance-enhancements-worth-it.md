@@ -3,7 +3,7 @@ title: 'Are React Performance "Enhancements" Worth it?'
 date: '2021-03-05'
 ---
 
-All over the internet, you hear conflicting opinions about the "best" way to approach optimizing performance in React. Instead of just believing what I read previously, I decided to take it upon myself to actually use the Devtools Profiler and compare the actual rendering times for the exact same component trees using the exact same scenarios.
+All over the internet, you hear conflicting opinions about the "best" way to approach optimizing performance in React. Instead of just believing what I read previously, I decided to take it upon myself to actually use the Devtools Profiler and compare the actual rendering times for the exact same component trees using the exact same testing steps.
 
 I think the two most common areas where state changes happen are generally speaking : 1) Forms 2) Data Fetching on Load. I ran through mutliple scenarios and documented the rendering times for each scenario.
 
