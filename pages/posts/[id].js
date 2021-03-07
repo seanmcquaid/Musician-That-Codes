@@ -56,7 +56,7 @@ const Header = styled.header`
   align-items: center;
   width: 100%;
   padding: 1rem;
-  max-width: 600px;
+  max-width: 660px;
 `;
 
 const Main = styled.main`
