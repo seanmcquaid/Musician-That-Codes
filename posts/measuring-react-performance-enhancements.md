@@ -120,11 +120,13 @@ Steps for Testing Times :
 
 We're looking at just a 0.4ms difference when comparing these more complex and likely instances. So are all of these enhancements really worth it???
 
-### Conclusion
+### Take Aways
 
 This all confirmed what I already have heard from people like Kent C Dodds, don't use performance enhancements or pre-optimize unless your code is obviously slow. Dan Abramov has a GREAT article on some solid principles to apply before even considering these concepts as well that I will provide.
 
-I think as programmers, we want to be as proactive as possible to prevent poor user experiences, however, this can create a lot of overhead and honestly, might not even be beneficial.
+I think as programmers we want to be as proactive as possible to prevent poor user experiences, however, this can create a lot of overhead for our teams and honestly, might not even be beneficial.
+
+Recommendations :
 
 Reference Dan's article and Kent C Dodds
 
