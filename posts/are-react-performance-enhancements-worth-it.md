@@ -1,6 +1,6 @@
 ---
 title: 'Are React Performance "Enhancements" Worth it?'
-date: '2021-03-05'
+date: '2021-03-07'
 ---
 
 All over the internet, you hear conflicting opinions about the "best" way to approach optimizing performance in React. Instead of just believing what I read previously, I decided to take it upon myself to use the Devtools Profiler and compare the actual rendering times for the same component trees using the same testing steps.
