@@ -23,17 +23,31 @@ Proud to say that I have made this happen! I really have enjoyed the opportunity
 
 ### Make time every week to do something fun with Katherine
 
+Definitely have done this! Being newly engaged, we have made plenty of time to hang out with one another and continue to strengthen our relationship.
+
 ### Continue to make time to hang out with my parents and help them get settled in GA (COVID permitting)
+
+Yes and yes! I helped my parents buy this house in GA and have been trying to encourage them to expand their social life.
 
 ### Continue to work on being patient and giving grace to people, even when I don't fully understand what's going on
 
+I think I have gotten significantly better at this but plan to have a goal related to this again next year. This is an area I am weak in and need to constantly remind myself of this.
+
 ### Continue to work on saving for the many amazing things I'd like to do that will require money in the next few years
+
+Yup yup! Not too much to say here, have been saving just fine and have been investing into retirement in my 401k and Roth IRA.
 
 ### Continue growing my programming skills and learning technologies that will help me grow into an Enterprise Architecture role in the future
 
+Done this in spades! I definitely have exceeded even my own dreams in terms of how I have grown this year. However, I am not totally certain I want to be an Enterprise Architect anymore. I have realized during this past while that I want to be more focused on products than platforms as a whole. I likely want to go the route of being a Lead Engineer and moved into some sort of Engineering Leadership role on my team.
+
 ### Take Gigi on a walk on the trail near my house every day!
 
+Done! Super easy goal and we have prioritized this every day, even during bad weather.
+
 ### Reflection
+
+I am very proud of myself for all I have achieved this year! Considering I basically did 9/10 goals, that's pretty solid. I am really looking forward to spending these next couple weeks reflecting and getting ready to set my goals for next year.
 
 Signing off,
 
